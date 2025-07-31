@@ -1,0 +1,21 @@
+{
+  "name": "3d-text",
+  "version": "0.1.0",
+  "dependencies": {
+    "aframe": "^1.7.1",
+    "aframe-environment-component": "^1.5.0",
+    "aframe-text-geometry-component": "^0.5.2",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
