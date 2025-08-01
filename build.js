@@ -1,10 +1,5 @@
-// import 'aframe';
-// import 'aframe-environment-component';
-// import * as THREE from 'three';
-// import { Font } from 'three/examples/jsm/loaders/FontLoader.js';
-// import fontData from './helvetiker_bold.typeface.json';
-
-// const font = new Font(fontData);
+import 'aframe';
+import 'aframe-environment-component';
 
 const text = document.getElementById('text');
 let repeatedTextLength;
@@ -16,8 +11,9 @@ function moveText() {
   function animate() {
     positionX += speed;
 
+    // Reset when text moves too far
     if (positionX > 50) {
-      positionX = -100;
+      positionX = -100; // Adjust depending on text width
     }
 
     text.setAttribute("position", `${positionX} 15 -35`);
@@ -44,23 +40,5 @@ window.addEventListener('DOMContentLoaded', () => {
       createScrollingText(textValue);
       moveText();
     }
-
-    // const scene = document.querySelector('a-scene');
-
-    // const textEntity = document.createElement('a-entity');
-
-    // const geometry = new THREE.TextGeometry(textValue, {
-    //   font: font,
-    //   size: 1,
-    //   height: 0.2,
-    // });
-
-    // const mesh = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color: 0xff6600 }));
-
-    // // Attach raw Three.js mesh to A-Frame entity
-    // textEntity.setObject3D('mesh', mesh);
-
-    // textEntity.setAttribute('position', '0 1.5 -2');
-    // scene.appendChild(textEntity);
   });
 });
