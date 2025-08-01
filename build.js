@@ -1,10 +1,11 @@
-import 'aframe';
-import 'aframe-environment-component';
-import * as THREE from 'three';
-import { Font } from 'three/examples/jsm/loaders/FontLoader.js';
-import fontData from './helvetiker_bold.typeface.json';
+// import 'aframe';
+// import 'aframe-environment-component';
+// import * as THREE from 'three';
+// import { Font } from 'three/examples/jsm/loaders/FontLoader.js';
+// import fontData from './helvetiker_bold.typeface.json';
 
-const font = new Font(fontData);
+// const font = new Font(fontData);
+
 const text = document.getElementById('text');
 let repeatedTextLength;
 
@@ -15,9 +16,8 @@ function moveText() {
   function animate() {
     positionX += speed;
 
-    // Reset when text moves too far
     if (positionX > 50) {
-      positionX = -100; // Adjust depending on text width
+      positionX = -100;
     }
 
     text.setAttribute("position", `${positionX} 15 -35`);

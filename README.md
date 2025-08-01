@@ -1,0 +1,1 @@
+Project with Aframe for uni. Didn't manage to get 3D text to work so I went with 2D text instead. 
