@@ -1,1 +1,1 @@
-Aframe project that displays text input in a 3D world.
+Aframe project that displays text input in a 3D world in an infinite scroll loop.

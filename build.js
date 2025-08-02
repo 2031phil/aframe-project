@@ -11,9 +11,9 @@ function moveText() {
   function animate() {
     positionX += speed;
 
-    // Reset when text moves too far
+    // Reset text position for infinite scroll effect
     if (positionX > 50) {
-      positionX = -100; // Adjust depending on text width
+      positionX = -100;
     }
 
     text.setAttribute("position", `${positionX} 15 -35`);
@@ -30,13 +30,14 @@ function createScrollingText(textValue) {
 
 window.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('generateBtn');
+  
   button.addEventListener('click', () => {
     const textValue = document.getElementById('textInput').value;
     let x = textValue.length;
+
+    // Adjust word repetitions depending on string length
     if (x > 0) {
       repeatedTextLength = 2*x*x - 32*x + 130;
-      console.log("String Length: ", x);
-      console.log("Repeated text length: ", repeatedTextLength);
       createScrollingText(textValue);
       moveText();
     }
