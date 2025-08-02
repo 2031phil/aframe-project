@@ -34,7 +34,3 @@ This will launch the project in your default browser.
 ├── package.json
 └── README.md
 ```
-
-## 📄 License
-
-This project is licensed under the MIT License.
